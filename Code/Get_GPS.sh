@@ -8,7 +8,7 @@ Todays_Folder="/home/pi/Desktop/GreenCover/Output/${Todays_Folder}/"
 [ ! -d "$Todays_Folder/Files" ] && mkdir -p "$Todays_Folder/Files"
 
 # GPS data file name
-Filename=$(echo $(date -u +"%Y%m%d_%T") | tr : _)
+Filename=$(echo $(date -u +"%Y%m%d_%T") | tr : '')
 Filename="Files/file${Filename}.txt"
 
 while true;

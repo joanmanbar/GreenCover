@@ -10,7 +10,7 @@ Todays_Folder="/home/pi/Desktop/GreenCover/Output/${Todays_Folder}/"
 [ ! -d "$Todays_Folder/Images" ] && mkdir -p "$Todays_Folder/Images"
 
 # Image name
-Image_Name=$(echo $(date -u +"%Y%m%d_%T") | tr : _)
+Image_Name=$(echo $(date -u +"%Y%m%d_%T") | tr : '')
 Image_Name="Images/img${Image_Name}.jpg"
 
 raspistill -t 2000 -o "$Todays_Folder$Image_Name"
